@@ -15,7 +15,7 @@ done
 echo
 echo "Arcane II — L'Arcane des Éléments"
 echo "Objectif : créer un réceptacle 'elements/' et y placer : ${ELEMENTS[*]}"
-echo "Commandes autorisées : mkdir, mv, ls"
+echo "Les pierres sont dispersées... à toi de les unir sans guidance."
 echo
 
 attempts=0
