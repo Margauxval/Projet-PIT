@@ -23,6 +23,7 @@ else
   echo "$VIES" > "$VIES_FILE"                                # - Mise à jour du fichier de vies.
   echo "L'incantation échoue... Vies restantes : $VIES"
   if [ $VIES -le 0 ]; then
+    cleanup
     echo "Tes pouvoirs t'abandonnent. Le jeu recommence depuis le début."
     bash "$DIR/arcane1.sh"
   else
