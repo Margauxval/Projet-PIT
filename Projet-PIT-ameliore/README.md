@@ -45,12 +45,12 @@ Chaque Arcane te donne un objectif à accomplir manuellement, puis tu lances la 
 
 ---
 
-### Arcane I — L’Arcane de la Découverte
+## Arcane I — L’Arcane de la Découverte
 
-#### Objectif
+### Objectif
 Trouver le fichier caché .grimoire_secret.txt et lire le mot magique catulus.
 
-#### Etapes
+### Etapes
 ```bash
 # Cherche le grimoire caché
 find . -type f -name ".grimoire_secret.txt"
