@@ -40,7 +40,6 @@ Chaque Arcane te donne un objectif à accomplir manuellement, puis tu lances la 
 - Chaque échec à la vérification te fait **perdre 1 vie**.
 - Si toutes les vies sont perdues : **retour à l’Arcane précédent**.
 - Tu décides **quand vérifier ta réussite**
-- Les vérifications fonctionnent depuis n’importe quel répertoire.
 - Tes vies sont enregistrées automatiquement dans des fichiers internes
 
 ---
@@ -53,13 +52,16 @@ Trouver le fichier caché .grimoire_secret.txt et lire le mot magique catulus.
 ### Etapes
 ```bash
 # Cherche le grimoire caché
+cd #trouver le bon fichier biblioteque_magique
+ls -a
+#ou plus rapide
 find . -type f -name ".grimoire_secret.txt"
 
 # Lis son contenu
 cat ./chemin/vers/.grimoire_secret.txt
 
 # Vérification
-bash modules/verifier_arcane1.sh
+./chemin/vers/modules/verifier_arcane1.sh
 ```
 Si le fichier contient le mot catulus, tu passes à l’Arcane II.
 
@@ -84,7 +86,7 @@ mv chemin/vers/terre.txt receptacle/
 ls -la receptacle
 
 # Vérification
-bash modules/verifier_arcane2.sh
+./chemin/vers/modules/verifier_arcane2.sh
 ```
 Si le fichier contient les 4 éléments, tu passes à l’Arcane III.
 
@@ -105,7 +107,7 @@ grep -i "rune" $(find . -type f -name "parchemin*.txt") > runes.txt
 cat runes.txt
 
 # Vérification
-bash modules/verifier_arcane3.sh
+./chemin/vers/modules/verifier_arcane3.sh
 ```
 Si toutes les runes ont été réunies, tu passes à l’Arcane IV.
 
@@ -126,7 +128,7 @@ find . -type f -iname "*corrupt*" -exec rm -v {} \;
 find . -type f -iname "*corrupt*" || echo "Le Sanctuaire est purifié."
 
 # Vérification
-bash modules/verifier_arcane4.sh
+./chemin/vers/modules/verifier_arcane4.sh
 ```
 Si tout a été nettoyé, tu passes à l’Arcane V.
 
@@ -144,7 +146,7 @@ tar -czf finale.tar.gz receptacle runes.txt
 tar -tzf finale.tar.gz
 
 # Vérification
-bash modules/verifier_arcane5.sh
+./chemin/vers/modules/verifier_arcane5.sh
 ```
 Si tout a été archivé, tu as terminé le jeu.
 
