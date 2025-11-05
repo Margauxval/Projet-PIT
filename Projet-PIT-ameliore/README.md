@@ -100,8 +100,12 @@ Extraire toutes les lignes contenant rune dans un fichier runes.txt ou un dossie
 # Trouve les parchemins
 find . -type f -name "parchemin*.txt"
 
-# Extrait les lignes contenant "rune"
+# Création d'un dossier runes
+mkdir -p runes
+
+# Extrait les lignes contenant "rune" sans le chemin
 grep -i "rune" $(find . -type f -name "parchemin*.txt") > runes.txt
+mv runes.txt runes/runes.txt
 
 # Vérifie le résultat
 cat runes.txt
