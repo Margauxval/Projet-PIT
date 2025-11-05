@@ -129,7 +129,7 @@ find . -type f -iname "*corrupt*"
 find . -type f -iname "*corrupt*" -exec rm -v {} \;
 
 # Vérifie qu’il n’en reste plus
-find . -type f -iname "*corrupt*" || echo "Le Sanctuaire est purifié."
+avec cd et ls
 
 # Vérification
 ./chemin/vers/modules/verifier_arcane4.sh
