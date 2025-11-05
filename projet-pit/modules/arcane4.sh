@@ -11,7 +11,7 @@ echo "corrompu" > "$SANCTUAIRE/dossier/corrompu_2.txt"
 echo
 echo "Arcane IV — L'Arcane du Nettoyage"
 echo "Objectif : trouver tous les fichiers contenant 'corrompu' dans leur nom et les supprimer."
-echo "Commandes autorisées : find, rm"
+echo "La corruption rôde dans chaque recoin... il te faut trouver et purifier."
 echo
 
 attempts=0
