@@ -22,6 +22,7 @@ else
   echo "$VIES" > "$VIES_FILE"
   echo "L'incantation échoue... Vies restantes : $VIES"
   if [ $VIES -le 0 ]; then
+    cleanup
     echo "Tes pouvoirs t'abandonnent. Tu es renvoyé à l'Arcane 1."
     bash "$DIR/arcane1.sh"
   else
