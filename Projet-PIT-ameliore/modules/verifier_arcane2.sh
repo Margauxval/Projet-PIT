@@ -2,7 +2,7 @@
 # Vérification de l'Arcane 2 — Les Éléments Dispersés
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LEVEL="$DIR/arcane2_env"
+LEVEL="$DIR/elements"
 VIES_FILE="$DIR/.vies_arcane2"
 VIES=$(cat "$VIES_FILE")
 
