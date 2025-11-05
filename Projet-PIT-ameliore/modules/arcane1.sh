@@ -8,11 +8,6 @@ LEVEL="$DIR/bibliotheque_magique"                   # Crée une variable LEVEL c
                                                     # situé au même endroit que le script.
 VIES_FILE="$DIR/.vies_arcane1"                      # Définit le chemin du fichier qui contiendra le nombre de vies du joueur.
 
-cleanup() {
-    echo "Nettoyage des artefacts de l'Arcane 1..."
-    rm -f "$DIR/.grimoire_secret.txt"
-}
-
 rm -rf "$LEVEL"
 mkdir -p "$LEVEL"
 echo 3 > "$VIES_FILE"
