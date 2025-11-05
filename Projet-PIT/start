@@ -1,11 +1,17 @@
 #!/usr/bin/env bash
 echo "=== Projet-PIT : Apprenti Bashicien ==="
+
+# Rendre tous les scripts exécutables (setup et verify)
+chmod +x ./modules/*.sh
+chmod +x ./start
+
 echo "Choisis ton arcane :"
 echo "1) Arcane de la Découverte"
 echo "2) Arcane des Éléments"
 echo "3) Arcane de la Transmutation"
 echo "4) Arcane du Nettoyage"
 echo "5) Arcane de la Convergence"
+
 read -rp "Numéro : " choix
 
 case $choix in
@@ -16,3 +22,4 @@ case $choix in
   5) bash modules/arcane5_setup.sh ;;
   *) echo "Option invalide." ;;
 esac
+
