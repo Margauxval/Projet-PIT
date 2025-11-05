@@ -104,7 +104,7 @@ find . -type f -name "parchemin*.txt"
 mkdir -p runes
 
 # Extrait les lignes contenant "rune" sans le chemin
-grep -i "rune" $(find . -type f -name "parchemin*.txt") > runes.txt
+grep -i "rune" ./recueil/parchemin*.txt | cut -d':' -f2- > runes.txt
 mv runes.txt runes/runes.txt
 
 # Vérifie le résultat
