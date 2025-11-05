@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-SANCTUAIRE=./sanctuaire
+SANCTUAIRE="$(dirname "$0")/../sanctuaire"
 GRIMOIRE=.grimoire_secret.txt
 if [ -f "$SANCTUAIRE/$GRIMOIRE" ] && grep -q "catulus" "$SANCTUAIRE/$GRIMOIRE"; then
 echo "✔ Félicitations ! Tu as appris le mot magique : catulus"
