@@ -2,11 +2,13 @@
 # Vérification de l'Arcane 5 — L'Archive Finale
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LEVEL="$DIR/arcane5_env"
+LEVEL="$DIR/archive_magique"
 VIES_FILE="$DIR/.vies_arcane5"
 VIES=$(cat "$VIES_FILE")
 
 success=0
+
+#cherche si l'archive a été créée
 if find "$DIR" -type f -name "finale.tar.gz" | grep -q .; then success=1; fi
 
 if [ $success -eq 1 ]; then
