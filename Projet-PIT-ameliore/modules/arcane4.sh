@@ -21,5 +21,4 @@ echo "Quand tu penses avoir réussi, invoque :"
 echo "  bash modules/verifier_arcane4.sh"
 echo
 echo "Ton sanctuaire de travail : $LEVEL"
-cd "$LEVEL"
-$SHELL
+
