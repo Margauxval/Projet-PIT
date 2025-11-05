@@ -5,6 +5,12 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LEVEL="$DIR/elements"
 VIES_FILE="$DIR/.vies_arcane2"
 
+cleanup() {
+    echo "Nettoyage des artefacts de l'Arcane 2..."
+    rm -rf "$DIR/receptacle"
+    rm -f "$DIR/feu.txt" "$DIR/eau.txt" "$DIR/air.txt" "$DIR/terre.txt"
+}
+
 rm -rf "$LEVEL"
 mkdir -p "$LEVEL"
 echo 3 > "$VIES_FILE"
