@@ -4,7 +4,7 @@ set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)" # Définit la variable DIR comme le dossier où se trouve ce script.
                                                     # "$(dirname "${BASH_SOURCE[0]}")" récupère le chemin du script.
                                                     # "cd ... && pwd" convertit ce chemin en chemin absolu.
-LEVEL="$DIR/receptacle"                             # Crée une variable LEVEL contenant le chemin vers un sous-dossier "receptacle"
+LEVEL="$DIR/bibliotheque_magique"                   # Crée une variable LEVEL contenant le chemin vers un sous-dossier "bibliotheque_magique"
                                                     # situé au même endroit que le script.
 VIES_FILE="$DIR/.vies_arcane1"                      # Définit le chemin du fichier qui contiendra le nombre de vies du joueur.
 
