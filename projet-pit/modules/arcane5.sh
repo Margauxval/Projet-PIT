@@ -9,7 +9,7 @@ mkdir -p "$SANCTUAIRE"
 echo
 echo "Arcane V — L'Arcane de la Convergence"
 echo "Objectif : créer une archive contenant 'elements/' et 'runes.txt' (tar -czvf ...)"
-echo "Commandes autorisées : tar -czvf, ls"
+echo "Le dernier secret ne se révèle qu’à ceux qui savent tout assembler..."
 echo
 
 attempts=0
