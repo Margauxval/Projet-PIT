@@ -2,11 +2,12 @@
 # Vérification de l'Arcane 4 — Les Fichiers Corrompus
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LEVEL="$DIR/arcane4_env"
+LEVEL="$DIR/grimoire_verreux"
 VIES_FILE="$DIR/.vies_arcane4"
 VIES=$(cat "$VIES_FILE")
 
 success=1
+#recherche des fichier corrompus
 if find "$DIR" -type f -name "*.corrupt" | grep -q .; then success=0; fi
 
 if [ $success -eq 1 ]; then
