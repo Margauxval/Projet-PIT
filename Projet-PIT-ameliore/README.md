@@ -1,14 +1,24 @@
-# Projet-PIT : Mode Libre
-Version libre du jeu d'apprentissage Bash magique.
+# Projet-PIT — Apprenti Bashicien  
+*Jeu d’apprentissage des commandes UNIX sous forme de quête magique*
 
-## Fonctionnement
-- Chaque arcane crée un environnement (`arcaneX_env/`) avec les fichiers nécessaires.
-- Le joueur peut utiliser le terminal normalement (`ls`, `mv`, `cat`, etc.).
-- Quand il pense avoir accompli la mission, il lance :
-  ```bash
-  bash modules/verifier_arcaneX.sh
-  ```
-- Si la vérification réussit → passage à l'arcane suivant.
-- Sinon → perte d'une vie. Si toutes sont perdues, retour à l'arcane précédent.
+---
 
-Chaque vérification fonctionne quel que soit le répertoire depuis lequel elle est lancée.
+## Introduction
+
+Bienvenue, jeune mage du Shell.  
+Tu t’apprêtes à entreprendre le **Rituel du Bashicien**, une quête initiatique à travers les mystères du terminal UNIX.  
+Chaque commande juste est un **sort réussi**, chaque erreur un **échec magique**.  
+
+Ton objectif : maîtriser les cinq Arcanes et devenir **Maître Bashicien**.
+
+---
+
+## Installation & Démarrage du jeu
+
+### 1. Clone le dépôt depuis GitHub
+```bash
+git clone https://github.com/Margauxval/Projet-PIT.git
+cd Projet-PIT
+
+### 2. Donne les droits d’exécution aux scripts
+
