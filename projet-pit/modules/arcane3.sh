@@ -20,7 +20,7 @@ fi
 echo
 echo "Arcane III — L'Arcane de la Transmutation"
 echo "Objectif : extraire toutes les lignes contenant 'rune' depuis $PARCHEMIN et les sauvegarder dans $RUNES"
-echo "Commandes autorisées : cat, grep, |, >"
+echo "Le parchemin murmure... seuls les initiés savent filtrer ses secrets."
 echo
 
 attempts=0
