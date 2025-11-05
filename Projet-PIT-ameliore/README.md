@@ -63,12 +63,12 @@ bash modules/verifier_arcane1.sh
 ```
 Si le fichier contient le mot catulus, tu passes à l’Arcane II.
 
-### Arcane II — L’Arcane des Éléments
+## Arcane II — L’Arcane des Éléments
 
-#### Objectif
+### Objectif
 Rassembler les fichiers feu.txt, eau.txt, air.txt, terre.txt dans un dossier receptacle/.
 
-#### Etapes
+### Etapes
 ```bash
 # Cherche les fichiers élémentaires
 find . -type f \( -name "feu.txt" -o -name "eau.txt" -o -name "air.txt" -o -name "terre.txt" \)
@@ -88,12 +88,12 @@ bash modules/verifier_arcane2.sh
 ```
 Si le fichier contient les 4 éléments, tu passes à l’Arcane III.
 
-### Arcane III — L’Arcane de la Transmutation
+## Arcane III — L’Arcane de la Transmutation
 
-#### Objectif
+### Objectif
 Extraire toutes les lignes contenant rune dans un fichier runes.txt ou un dossier runes/.
 
-#### Etapes
+### Etapes
 ```bash
 # Trouve les parchemins
 find . -type f -name "parchemin*.txt"
@@ -109,12 +109,12 @@ bash modules/verifier_arcane3.sh
 ```
 Si toutes les runes ont été réunies, tu passes à l’Arcane IV.
 
-### Arcane IV — L’Arcane du Nettoyage
+## Arcane IV — L’Arcane du Nettoyage
 
-#### Objectif
+### Objectif
 Supprimer tous les fichiers corrompus (*corrupt* ou *.corrupt).
 
-#### Etapes
+### Etapes
 ```bash
 # Liste les fichiers corrompus
 find . -type f -iname "*corrupt*"
@@ -130,12 +130,12 @@ bash modules/verifier_arcane4.sh
 ```
 Si tout a été nettoyé, tu passes à l’Arcane V.
 
-### Arcane V — L’Arcane de la Convergence
+## Arcane V — L’Arcane de la Convergence
 
-#### Objectif
+### Objectif
 Créer une archive finale.tar.gz contenant tes artefacts magiques (receptacle/, runes.txt, etc.).
 
-#### Etapes
+### Etapes
 ```bash
 # Crée l’archive
 tar -czf finale.tar.gz receptacle runes.txt
