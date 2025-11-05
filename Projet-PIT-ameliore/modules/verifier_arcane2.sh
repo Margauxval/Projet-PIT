@@ -7,7 +7,7 @@ VIES_FILE="$DIR/.vies_arcane2"
 VIES=$(cat "$VIES_FILE")
 
 success=1
-#recherche si les éléments sont dans le bon dossier et si le find a été effectué correctement
+#recherche si les éléments sont dans le bon dossier 
 for e in feu eau air terre; do if ! find "$DIR" -type f -path "*/receptacle/$e.txt" | grep -q .; then success=0; fi; done
 
 if [ $success -eq 1 ]; then
