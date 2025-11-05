@@ -2,11 +2,13 @@
 # Vérification de l'Arcane 3 — Les Runes Éparses
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LEVEL="$DIR/arcane3_env"
+LEVEL="$DIR/recueil"
 VIES_FILE="$DIR/.vies_arcane3"
 VIES=$(cat "$VIES_FILE")
 
 success=0
+
+# Vérifie s’il existe au moins un fichier texte dans un sous-dossier "runes" du dossier $DIR.
 if find "$DIR" -type f -path "*/runes/*.txt" | grep -q .; then success=1; fi
 
 if [ $success -eq 1 ]; then
