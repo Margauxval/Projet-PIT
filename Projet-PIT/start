@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "=== Projet-PIT : Apprenti Bashicien ==="
 
-# Rendre tous les scripts exécutables (setup et verify)
+# Rendre tous les scripts exécutables
 chmod +x ./modules/*.sh
 chmod +x ./start
 
@@ -22,4 +22,5 @@ case $choix in
   5) bash modules/arcane5_setup.sh ;;
   *) echo "Option invalide." ;;
 esac
+
 
