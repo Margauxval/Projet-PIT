@@ -1,0 +1,18 @@
+#!/usr/bin/env bash
+echo "=== Projet-PIT : Apprenti Bashicien ==="
+echo "Choisis ton arcane :"
+echo "1) Arcane de la Découverte"
+echo "2) Arcane des Éléments"
+echo "3) Arcane de la Transmutation"
+echo "4) Arcane du Nettoyage"
+echo "5) Arcane de la Convergence"
+read -rp "Numéro : " choix
+
+case $choix in
+  1) bash modules/arcane1_setup.sh ;;
+  2) bash modules/arcane2_setup.sh ;;
+  3) bash modules/arcane3_setup.sh ;;
+  4) bash modules/arcane4_setup.sh ;;
+  5) bash modules/arcane5_setup.sh ;;
+  *) echo "Option invalide." ;;
+esac
