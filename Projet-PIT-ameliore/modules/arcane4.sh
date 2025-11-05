@@ -5,12 +5,6 @@ DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 LEVEL="$DIR/grimoire_verreux"
 VIES_FILE="$DIR/.vies_arcane4"
 
-cleanup() {
-    echo "Nettoyage des artefacts de l'Arcane 4..."
-    # Supprime tous les fichiers corrompus qui auraient été créés pour l'arcane
-    find "$DIR" -type f -name "*corrupt*" -exec rm -f {} +
-}
-
 rm -rf "$LEVEL"
 mkdir -p "$LEVEL"
 echo 3 > "$VIES_FILE"
