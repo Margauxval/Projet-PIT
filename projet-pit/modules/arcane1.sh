@@ -20,7 +20,7 @@ attempts=0
 while true; do
   read -r -p "arcane1>> " cmd
   [ -z "$cmd" ] || continue
-  if [[ "$cmd" =~ (;|\&\&|\|\||`|\$\(.*\)) ]]; then
+  if [[ "$cmd" =~ (;|\&\&|\|\||\`|\$\(.*\)) ]]; then
     echo "Incantation interdite détectée."
     return 1
   fi
