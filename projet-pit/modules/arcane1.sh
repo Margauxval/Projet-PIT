@@ -13,7 +13,7 @@ fi
 echo
 echo "Arcane I — L'Arcane de la Découverte"
 echo "Objectif : explorer le sanctuaire et lire le grimoire caché ($GRIMOIRE)."
-echo "Commandes autorisées : ls, ls -a, cd, cat, pwd"
+echo "Le savoir dort dans les ombres... à toi de découvrir comment le réveiller."
 echo
 
 attempts=0
