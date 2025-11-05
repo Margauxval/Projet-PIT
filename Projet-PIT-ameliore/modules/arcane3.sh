@@ -2,7 +2,7 @@
 # Arcane 3 — Les Runes Éparses
 set -euo pipefail
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-LEVEL="$DIR/receuil"
+LEVEL="$DIR/recueil"
 VIES_FILE="$DIR/.vies_arcane3"
 
 rm -rf "$LEVEL"
