@@ -63,7 +63,7 @@ cat ./chemin/vers/.grimoire_secret.txt
 # Vérification
 ./chemin/vers/modules/verifier_arcane1.sh
 ```
-Si le fichier contient le mot catulus, tu passes à l’Arcane II.
+Si tu entre le mot catulus, tu passes à l’Arcane II.
 
 ## Arcane II — L’Arcane des Éléments
 
