@@ -44,13 +44,13 @@ if [ $success -eq 1 ]; then
 else
     VIES=$((VIES - 1))
     echo "$VIES" > "$VIES_FILE"
-    echo "❌ L'incantation échoue... Vies restantes : $VIES"
+    echo "L'incantation échoue... Vies restantes : $VIES"
     if [ $VIES -le 0 ]; then
         cleanup        # Nettoie l'Arcane 2
         cleanup_prev   # Nettoie l'Arcane 1
-        echo "💀 Tes pouvoirs t'abandonnent. Tu es renvoyé à l'Arcane 1."
+        echo "Tes pouvoirs t'abandonnent. Tu es renvoyé à l'Arcane 1."
         bash "$DIR/arcane1.sh"
     else
-        echo "↻ Tente à nouveau, mage persévérant. Corrige ton œuvre et relance : bash modules/verifier_arcane2.sh"
+        echo "Tente à nouveau, mage persévérant. Corrige ton œuvre et relance : bash modules/verifier_arcane2.sh"
     fi
 fi
