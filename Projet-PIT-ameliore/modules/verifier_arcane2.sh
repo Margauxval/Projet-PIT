@@ -11,7 +11,7 @@ VIES=$(cat "$VIES_FILE")
 cleanup() {
     echo "Nettoyage des artefacts de l'Arcane 2..."
     rm -rf "$DIR/receptacle"
-    rm -f "$DIR/feu.txt" "$DIR/eau.txt" "$DIR/air.txt" "$DIR/terre.txt"
+    rm -f "$DIR/elements/haunt"/*.txt 2>/dev/null || true
 }
 # -------------------------------
 
@@ -19,17 +19,17 @@ cleanup() {
 # Fonction de nettoyage de l'Arcane 1 (précédent)
 cleanup_prev() {
     echo "Nettoyage des artefacts de l'Arcane 1..."
-    rm -f "$DIR/.grimoire_secret.txt"
+    rm -f "$DIR/bibliotheque_magique/.grimoire_secret.txt"
 }
 # -------------------------------
 
 success=0
-# Vérifie que TOUS les éléments sont dans le bon dossier receptacle/
-if [ -d "$DIR/elements/receptacle" ]; then
-    if [ -f "$DIR/elements/receptacle/feu.txt" ] &&
-       [ -f "$DIR/elements/receptacle/eau.txt" ] &&
-       [ -f "$DIR/elements/receptacle/air.txt" ] &&
-       [ -f "$DIR/elements/receptacle/terre.txt" ]; then
+# Vérifie que TOUS les éléments sont bien dans le dossier receptacle/
+if [ -d "$DIR/receptacle" ]; then
+    if [ -f "$DIR/receptacle/feu.txt" ] &&
+       [ -f "$DIR/receptacle/eau.txt" ] &&
+       [ -f "$DIR/receptacle/air.txt" ] &&
+       [ -f "$DIR/receptacle/terre.txt" ]; then
         success=1
     fi
 fi
@@ -44,13 +44,13 @@ if [ $success -eq 1 ]; then
 else
     VIES=$((VIES - 1))
     echo "$VIES" > "$VIES_FILE"
-    echo "L'incantation échoue... Vies restantes : $VIES"
+    echo "❌ L'incantation échoue... Vies restantes : $VIES"
     if [ $VIES -le 0 ]; then
         cleanup        # Nettoie l'Arcane 2
         cleanup_prev   # Nettoie l'Arcane 1
-        echo "Tes pouvoirs t'abandonnent. Tu es renvoyé à l'Arcane 1."
+        echo "💀 Tes pouvoirs t'abandonnent. Tu es renvoyé à l'Arcane 1."
         bash "$DIR/arcane1.sh"
     else
-        echo "Tente à nouveau, mage persévérant. Corrige ton œuvre et relance : bash modules/verifier_arcane2.sh"
+        echo "↻ Tente à nouveau, mage persévérant. Corrige ton œuvre et relance : bash modules/verifier_arcane2.sh"
     fi
 fi
