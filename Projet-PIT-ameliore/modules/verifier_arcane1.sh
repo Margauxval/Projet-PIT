@@ -4,41 +4,48 @@ set -euo pipefail
 
 DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 VIES_FILE="$DIR/.vies_arcane1"
-VIES=$(cat "$VIES_FILE")  # Lit le nombre actuel de vies et le stocke dans la variable VIES.
+VIES=$(cat "$VIES_FILE")
 
 # -------------------------------
-# Fonction de nettoyage de l'Arcane 1
+# Fonction de nettoyage
 cleanup() {
     echo "Nettoyage des artefacts de l'Arcane 1..."
-    rm -f "$DIR/.grimoire_secret.txt"
+    rm -rf "$DIR/bibliotheque_magique"
 }
 # -------------------------------
 
-success=0
+# Le mot magique attendu (contenu dans le grimoire)
+SECRET_WORD="catulus"
 
-# Recherche du grimoire secret contenant le mot magique "catulus"
-for f in $(find "$DIR" -type f -name ".grimoire_secret.txt"); do
-    if grep -q "catulus" "$f"; then
-        success=1
-    fi
-done
+# Vérifie d'abord que le fichier existe
+GRIMOIRE="$DIR/bibliotheque_magique/.grimoire_secret.txt"
+if [ ! -f "$GRIMOIRE" ]; then
+    echo "⚠️ Le grimoire secret a disparu !"
+    echo "Réinvoque l'arcane avec : bash modules/arcane1.sh"
+    exit 1
+fi
 
-if [ $success -eq 1 ]; then
+echo
+echo "🔮 Entre le mot magique inscrit dans ton grimoire :"
+read -r ANSWER
+
+if [[ "$ANSWER" == "$SECRET_WORD" ]]; then
     echo
-    echo "Les forces mystiques t'accordent leur faveur !"
+    echo "✨ Les forces mystiques t'accordent leur faveur !"
     echo "Tu as triomphé de l'Arcane 1 — L'Arcane de la Découverte."
     echo "Le voile se lève... L'Arcane 2 t'appelle."
     bash "$DIR/arcane2.sh"
     exit 0
 else
     VIES=$((VIES - 1))
-    echo "$VIES" > "$VIES_FILE"  # Mise à jour du fichier de vies.
-    echo "L'incantation échoue... Vies restantes : $VIES"
+    echo "$VIES" > "$VIES_FILE"
+    echo
+    echo "❌ L'incantation échoue... Vies restantes : $VIES"
     if [ $VIES -le 0 ]; then
-        cleanup  # Supprime les fichiers de l'Arcane 1
-        echo "Tes pouvoirs t'abandonnent. Le jeu recommence depuis le début."
+        cleanup
+        echo "💀 Tes pouvoirs t'abandonnent. Le jeu recommence depuis le début."
         bash "$DIR/arcane1.sh"
     else
-        echo "Tente à nouveau, mage persévérant. Corrige ton œuvre et relance : bash modules/verifier_arcane1.sh"
+        echo "↻ Tente à nouveau, mage persévérant. Relis ton grimoire et relance : bash modules/verifier_arcane1.sh"
     fi
 fi
