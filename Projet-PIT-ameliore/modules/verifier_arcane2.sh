@@ -23,13 +23,16 @@ cleanup_prev() {
 }
 # -------------------------------
 
-success=1
-# Recherche si tous les éléments sont dans le bon dossier
-for e in feu eau air terre; do
-    if ! find "$DIR" -type f -path "*/receptacle/$e.txt" | grep -q .; then
-        success=0
+success=0
+# Vérifie que TOUS les éléments sont dans le bon dossier receptacle/
+if [ -d "$DIR/elements/receptacle" ]; then
+    if [ -f "$DIR/elements/receptacle/feu.txt" ] &&
+       [ -f "$DIR/elements/receptacle/eau.txt" ] &&
+       [ -f "$DIR/elements/receptacle/air.txt" ] &&
+       [ -f "$DIR/elements/receptacle/terre.txt" ]; then
+        success=1
     fi
-done
+fi
 
 if [ $success -eq 1 ]; then
     echo
