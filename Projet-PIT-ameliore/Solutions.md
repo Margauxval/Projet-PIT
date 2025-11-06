@@ -76,11 +76,11 @@ Rassembler les fichiers feu.txt, eau.txt, air.txt, terre.txt dans un dossier rec
 find . -type f \( -name "feu.txt" -o -name "eau.txt" -o -name "air.txt" -o -name "terre.txt" \)
 
 # Crée le réceptacle et déplace les fichiers
-mkdir -p /elements/receptacle/
-mv chemin/vers/feu.txt /elements/receptacle/
-mv chemin/vers/eau.txt /elements/receptacle/
-mv chemin/vers/air.txt /elements/receptacle/
-mv chemin/vers/terre.txt /elements/receptacle/
+mkdir -p receptacle/
+mv chemin/vers/feu.txt receptacle/
+mv chemin/vers/eau.txt receptacle/
+mv chemin/vers/air.txt receptacle/
+mv chemin/vers/terre.txt receptacle/
 
 # Vérifie leur présence
 ls -la receptacle
