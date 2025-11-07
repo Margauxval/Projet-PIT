@@ -127,10 +127,13 @@ Tu n’es plus un apprenti. Tu es désormais...
 
 ## Structure du projet
 
+- Tout est effectué en langage bash
 - Dossier principal : contient start.sh pour lancer le jeu.
 - Modules : modules/ contient tous les scripts d’Arcanes et leurs vérifications :
 - arcane1.sh → arcane5.sh : scripts d’initialisation des Arcanes (créent fichiers/dossiers et initialisent vies).
-- verifier_arcane1.sh → verifier_arcane5.sh : scripts de vérification et de transition entre Arcanes.
+- verifier_arcane1.sh → verifier_arcane5.sh : scripts de vérification et de transition entre Arcanes
+  - Arcane 1: interraction du joueur (mot à entrer)
+  - Autres Arcanes: verrification de présence de fichiers ou de textes 
 - Fichiers de sauvegarde : .vies_arcaneX pour stocker le nombre de vies restantes par Arcane.
 - Dossiers créés dynamiquement par le jeu :
   - bibliotheque_magique (Arcane 1)
@@ -138,4 +141,22 @@ Tu n’es plus un apprenti. Tu es désormais...
   - recueil et runes (Arcane 3)
   - grimoire_verreux (Arcane 4)
   - archive_magique + finale.tar.gz (Arcane 5)
+ 
+## Gestion des Etats
+
+- Les vies sont stockées dans des fichiers .vies_arcaneX.
+- Chaque script de vérification décrémente les vies s'il y a une erreur et renvoie au script précédent si elles tombent à 0.
+- Chaque Arcane est relativement autonome : nettoyage des fichiers et dossiers à chaque échec ou reset.
+
+## Pistes d’amélioration
+
+- Ajouter un timer au bout duquel le joueur perd une vie
+- Insérer plusieurs possibilités de résolution d'un arcane et/ou des étapes aléatoires dans chaque arcane pour que le jeu puisse se jouer plusieurs fois (sans connaître les réponses par coeur)
+- Ajouter un système de score:
+  - Score de départ nul
+  - Pour chaque arcane terminé, un certain nombre de points est attribué en fonction du nombre de tentatives nécessaires avant que le joueur réussisse.
+  - Si le score est trop faible proposer un niveau bonus pour que le joueur s'améliore
+- Afficher une aide quand il ne reste qu'une vie au joueur 
+-  Faire une interface plus graphique (couleurs ? images ? ...)
+ 
 
