@@ -8,7 +8,7 @@ Tu incarnes un **apprenti mage du système UNIX**.
 Chaque commande correcte est un **sort réussi**.  
 Chaque erreur de syntaxe ou de logique provoque un **“échec magique”** (le terminal t’envoie un message d’erreur mystérieux et tu recommences à l’étape 1).  
 
-**Ton but** : obtenir le titre **Bashicien** en réussissant une série d’épreuves, chacune correspondant à un concept Unix (fichiers, redirections, pipes, processus, variables, etc.).
+**Ton but** : obtenir le titre **Bashicien** en réussissant une série d’épreuves, chacune correspondant à un concept Unix.
 
 ---
 
