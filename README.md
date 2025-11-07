@@ -121,5 +121,21 @@ tar -czvf
 Les lignes de commande deviennent des **incantations**. Le terminal, ton grimoire.  
 Tu n’es plus un apprenti. Tu es désormais...  
 
-# **Le Maître Bashicien, Archimage du Système UNIX**
+**Le Maître Bashicien, Archimage du Système UNIX**
+
+# Pour les développeurs
+
+## Structure du projet
+
+- Dossier principal : contient start.sh pour lancer le jeu.
+- Modules : modules/ contient tous les scripts d’Arcanes et leurs vérifications :
+- arcane1.sh → arcane5.sh : scripts d’initialisation des Arcanes (créent fichiers/dossiers et initialisent vies).
+- verifier_arcane1.sh → verifier_arcane5.sh : scripts de vérification et de transition entre Arcanes.
+- Fichiers de sauvegarde : .vies_arcaneX pour stocker le nombre de vies restantes par Arcane.
+- Dossiers créés dynamiquement par le jeu :
+  - bibliotheque_magique (Arcane 1)
+  - lements/haunt et receptacle (Arcane 2)
+  - recueil et runes (Arcane 3)
+  - grimoire_verreux (Arcane 4)
+  - archive_magique + finale.tar.gz (Arcane 5)
 
