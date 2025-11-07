@@ -22,7 +22,7 @@ cd Projet-PIT
 ```
 ### 2. Donne les droits d’exécution aux scripts
 ```bash
-chmod +x start.sh modules/*.sh
+chmod +x start.sh 
 ```
 ### 3. Lance le jeu
 ```bash
