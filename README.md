@@ -6,7 +6,7 @@ Faire un jeu pour apprendre à utiliser les commandes UNIX
 
 Tu incarnes un **apprenti mage du système UNIX**.  
 Chaque commande correcte est un **sort réussi**.  
-Chaque erreur de syntaxe ou de logique provoque un **“échec magique”** (le terminal t’envoie un message d’erreur mystérieux et tu recommences à l’étape 1).  
+Chaque erreur de vérification provoque un **“échec magique”** (le terminal t’envoie un message d’erreur mystérieux et tu perds une vie). Lorsque tu as utilisé toutes tes vies tu retourne à l'épreuve précedente.
 
 **Ton but** : obtenir le titre **Bashicien** en réussissant une série d’épreuves, chacune correspondant à un concept Unix.
 
@@ -19,8 +19,6 @@ Chaque arcane introduit de nouvelles commandes et mécaniques.
 
 ### Arcane I — L’Arcane de la Découverte
 
-> “Tout mage commence dans l’ombre. Pour trouver la lumière, il faut explorer les profondeurs d’UNIX.”
-
 Le jeune apprenti se réveille dans le **Sanctuaire du Terminal**.  
 Son grimoire de magix a disparu. Il doit apprendre à explorer son environnement, à lire les signes cachés et à retrouver son premier sort.
 
@@ -30,43 +28,37 @@ Son grimoire de magix a disparu. Il doit apprendre à explorer son environnement
 - Lire son contenu pour apprendre le mot magique : `catulus`, le sort de révélation.
 
 **Sort final :**  
-- Le joueur découvre un **Spectre du Néant**, créature invisible.  
-- Pour le vaincre, il doit révéler ce qui est caché.
+Pour passer à l'étape suivante, l'apprenti doit révéler ce qui est caché.
 
 **Commandes à utiliser :**  
 ls, ls -a, cd, cat, pwd
 
 
-> “Le Spectre se dissipe dans la brume. Le grimoire réapparaît entre tes mains.”
+> Le mot magique à entrer lors de la vérification est "catulus"
 
 ---
 
 ### Arcane II — L’Arcane des Éléments
 
-> “Les quatre forces du monde reposent dans les fichiers. Seul celui qui sait les rassembler peut invoquer la vraie puissance.”
-
 Le mage doit retrouver les **pierres élémentaires** : `feu.txt`, `eau.txt`, `air.txt`, `terre.txt`, dispersées dans le répertoire.  
 Les réunir permet d’équilibrer la magie d’UNIX.
 
 **Objectif :**  
-- Créer un réceptacle `elements/`.  
+- Créer un dossier receptacle  
 - Y placer les quatre fichiers élémentaires.
 
 **Sort final :**  
-- Un **Golem chaotique** surgit, créé par le déséquilibre des éléments.  
-- Le mage doit unir les quatre pierres pour le dissoudre.
+Les quatres éléments sont déplacés dans le réceptacle.
 
 **Commandes à utiliser :**  
 mkdir, mv
 
 
-> “Les pierres fusionnent dans une lumière aveuglante. Le Golem se désintègre en poussière numérique.”
+> Lancement de la vérification
 
 ---
 
 ### Arcane III — L’Arcane de la Transmutation
-
-> “Les mots ont un pouvoir. Transforme-les, filtre-les, combine-les — et ils deviendront magix.”
 
 Le mage découvre un vieux **parchemin de runes** : `parchemin.txt`.  
 Certaines lignes renferment des secrets interdits : il faut les extraire avec discernement.
@@ -74,22 +66,20 @@ Certaines lignes renferment des secrets interdits : il faut les extraire avec di
 **Objectif :**  
 - Trouver toutes les lignes contenant le mot `rune`.  
 - Les enregistrer dans un nouveau fichier `runes.txt`.
+- déplacer le fichier dans un dossier runes
 
-**Sort final :**  
-- Un **Esprit des Mots** surgit du parchemin, distordant les textes du sanctuaire.  
+**Sort final :**   
 - Le mage canalise les flux de données pour reformer les runes.
 
 **Commandes à utiliser :**  
 cat, grep, |, >
 
 
-> “Les runes brillent d’une lumière dorée. L’Esprit s’incline et disparaît dans les lignes du code.”
+> Lancement de la vérification
 
 ---
 
 ### Arcane IV — L’Arcane du Nettoyage
-
-> “Toute création engendre des impuretés. Seul celui qui sait purifier le système peut empêcher la corruption.”
 
 Le sanctuaire est envahi par des artefacts corrompus, fichiers maudits dispersés dans l’arborescence.  
 Le mage doit les localiser et les détruire avant qu’ils ne contaminent tout le système.
@@ -98,37 +88,32 @@ Le mage doit les localiser et les détruire avant qu’ils ne contaminent tout l
 - Trouver tous les fichiers contenant `corrompu` dans leur nom.  
 - Les supprimer proprement.
 
-**Sort final :**  
-- Un **Ver de Données** se nourrit des fichiers infectés et s’étend dans les sous-dossiers.  
+**Sort final :**    
 - Le mage récite la Formule de Purge.
 
 **Commandes à utiliser :**  
 find, rm
 
 
-> “Le Ver hurle et se dissout dans le néant du Shell. Le sanctuaire retrouve sa clarté.”
+> Lancement de la vérification
 
 ---
 
 ### Arcane V — L’Arcane de la Convergence
 
-> “Le vrai pouvoir ne réside pas dans la création, mais dans la maîtrise. Scelle ton savoir dans une archive éternelle.”
-
-Ayant vaincu la corruption, le mage doit maintenant rassembler toute sa connaissance pour affronter la **dernière entité** :  
-le **Daemon Suprême**, esprit du système UNIX lui-même.
+Ayant vaincu la corruption, le mage doit maintenant rassembler toute sa connaissance pour devenir **Maître Bashicien**.
 
 **Objectif :**  
 - Créer une grande archive magique contenant les éléments et les runes.  
 - Préparer la compression ultime.
 
-**Sort final :**  
-- Le Daemon Suprême émerge du Kernel.  
+**Sort final :**   
 - Le mage scelle tout son savoir dans une archive sacrée.
 
 **Commandes à utiliser :**  
 tar -czvf
 
-> “Le Daemon est enfermé dans l’archive. Le terminal se tait. Le titre de Maître du Bashicien t’est décerné.”
+> Lancement de la vérification
 ---
 
 ## Épilogue — Le Maître Bashicien
